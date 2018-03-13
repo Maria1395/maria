@@ -1,0 +1,206 @@
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/maria$ cd /home/admin1/Desktop/maria/rose 
+
+ADDING A FILE
+-------------
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ cat > lab1.sh
+echo "hello"
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ git add lab1.sh
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   lab1.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	lab1.txt
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   lab1.sh
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ 
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   lab1.sh
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ git commit -m "Adding a file"
+[master (root-commit) 17a68be] Adding a file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 lab1.sh
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ nano lab1.sh
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ cat lab1.sh
+echo "hello"
+echo "Good afternoon"
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ git commit -m "Adding a file"
+On branch master
+Changes not staged for commit:
+	modified:   lab1.sh
+
+no changes added to commit
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ git commit -m "Adding a file" -a
+[master 6672074] Adding a file
+ 1 file changed, 1 insertion(+)
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ git status
+On branch master
+nothing to commit, working directory clean
+
+New git repository
+------------------
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/maria/rose$ cd /home/admin1/Desktop/s4lab 
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git init
+Initialized empty Git repository in /home/admin1/Desktop/s4lab/.git/
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git add .
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git commit
+Use "fg" to return to nano.
+
+[2]+  Stopped                 git commit
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git commit -m "new git repository"
+[master (root-commit) d304230] new git repository
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.sh
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git config user.name "Maria"
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git config user.email "mariarose1395@gmail.com"
+
+UPDATING FILE
+-------------
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ nano hello.sh
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ nano cs.sh
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git add --update
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   hello.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	cs.sh
+
+clone
+-----
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git clone --depth 50 "git://github.com/tswicegood/bobby-tables.git"
+Cloning into 'bobby-tables'...
+remote: Counting objects: 39, done.
+remote: Total 39 (delta 0), reused 0 (delta 0), pack-reused 39
+Receiving objects: 100% (39/39), 43.03 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (10/10), done.
+Checking connectivity... done.
+
+To move a file
+--------------
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC:~/Desktop/s4lab$ git mv mrose mr
+
+To move a directory
+-------------------
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ mkdir s4
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ mv s4 mr
+
+
+Remove a file
+-------------
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab/mr$ cat > hello.sh
+echo "hello"
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab/mr$ rm hello.sh
+
+OR
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ cat > hello.sh
+echo "hi"
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git add hello.sh
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git add -u
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   hello.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	bobby-tables/
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git rm hello.sh
+error: the following file has changes staged in the index:
+    hello.sh
+(use --cached to keep the file, or -f to force removal)
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git rm hello.sh -f
+rm 'hello.sh'
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ 
+
+
+Remove a directory
+------------------
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab/mr$ mkdir ro
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab/mr$ rm -r ro
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    hello.sh -> mr/mr
+	
+OR
+	
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ mkdir k
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git add k
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	bobby-tables/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ cd k
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab/k$ cat > hello.sh
+echo "hello"
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab/k$ git add hello.sh
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab/k$ cd ..
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git add -u
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   k/hello.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	bobby-tables/
+
+admin1@admin1-HP-Compaq-8200-Elite-MT-PC://home/admin1/Desktop/s4lab$ git rm -r k -f
+rm 'k/hello.sh'
+
+
+
+
+
+
+
+
+
